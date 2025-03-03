@@ -23,7 +23,8 @@ export default [
   },
   {
     rules: {
-      "@typescript-eslint/no-namespace": "off"
+      "@typescript-eslint/no-namespace": "off",
+      "no-console": ["error", { allow: ["warn", "error"] }]
     }
   }
 ];
