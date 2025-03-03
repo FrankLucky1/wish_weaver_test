@@ -9,9 +9,9 @@ module.exports = {
       sourceType: "module",
     },
     plugins: ["react"],
-    rules: {
-      "no-console": "error", // Block console.log statements
-      "react/prop-types": "off",
-    },
+    
+      rules: {
+        "no-console": "error"
+      }
   };
   
