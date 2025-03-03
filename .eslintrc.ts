@@ -11,7 +11,7 @@ module.exports = {
     plugins: ["react"],
     
       rules: {
-        "no-console": "error"
+        "no-console": ["error", { "allow": ["warn", "error"] }]
       }
   };
   
