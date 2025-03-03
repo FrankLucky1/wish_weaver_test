@@ -26,7 +26,6 @@ export function Welcome() {
       .catch((error) => setError(error))
       .finally(() => setLoading(false));
   }, []);
-  console.log("object", images);
 
   if (loading) {
     return (
