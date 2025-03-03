@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "npm run build",
+    "build": "vite build",
     "dev": "react-router dev --host 0.0.0.0",
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc"
@@ -38,3 +38,4 @@
     "vite-tsconfig-paths": "^5.1.4"
   }
 }
+
