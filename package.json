@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "vite build",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --max-warnings=0",
+    "build": "npm run lint && vite build",
     "dev": "react-router dev --host 0.0.0.0",
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc"
