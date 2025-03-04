@@ -3,7 +3,7 @@ name: Deploy React App
 on:
   push:
     branches:
-      - staging # Deploys only when pushing to staging
+      - main # Deploys only when pushing to main
 
 jobs:
   deploy:
