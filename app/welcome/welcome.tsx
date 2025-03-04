@@ -6,6 +6,7 @@ export function Welcome() {
   interface Image {
     src: { original: string };
     height: number;
+    photographer: string;
   }
 
   const [images, setImages] = useState<Image[]>([]);
@@ -26,7 +27,7 @@ export function Welcome() {
       .catch((error) => setError(error))
       .finally(() => setLoading(false));
   }, []);
-  
+
 
   if (loading) {
     return (
@@ -50,13 +51,19 @@ export function Welcome() {
         {images.map((src, index) => (
           <div
             key={index}
-            className={`relative break-inside-avoid mb-4 rounded-lg overflow-clip`}
+            className="relative break-inside-avoid mb-4 rounded-lg overflow-clip group cursor-pointer"
           >
+            {/* Image with overlay effect */}
             <img
               src={src?.src?.original}
               alt={`Masonry ${index}`}
-              className="w-full object-cover rounded-lg hover:scale-[1.1] duration-300 ease-in cursor-pointer"
+              className="w-full object-cover rounded-lg group-hover:scale-[1.1] group-hover:brightness-50 transition-all duration-300 ease-in cursor-pointer"
             />
+
+            {/* Hover text */}
+            <p className="absolute inset-0 flex items-center justify-center text-white text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              Photographer: {src.photographer}
+            </p>
           </div>
         ))}
       </div>
