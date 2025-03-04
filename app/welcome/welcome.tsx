@@ -26,6 +26,7 @@ export function Welcome() {
       .catch((error) => setError(error))
       .finally(() => setLoading(false));
   }, []);
+  
 
   if (loading) {
     return (
