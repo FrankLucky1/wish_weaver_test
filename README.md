@@ -29,6 +29,15 @@ npm install
 
 ### Development
 
+Environment Variables Setup:
+
+Before running the project, create a .env file in the root directory:
+
+cp .env.example .env
+
+Then, update the values in .env with your actual credentials.
+
+
 Start the development server with HMR:
 
 ```bash
